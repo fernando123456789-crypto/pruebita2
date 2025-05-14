@@ -4,24 +4,21 @@
     Author     : Usuario
 --%>
 
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
     <title>Iniciar Sesión</title>
     <link rel="stylesheet" type="text/css" href="Resources/css/styles.css">
 </head>
-<body>
-    <h2>Login</h2>
-    <form action="LoginServlet" method="post">
-        <label for="correo">Correo:</label>
-        <input type="text" id="correo" name="correo" required><br><br>
-
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" name="password" required><br><br>
-
-        <input type="submit" value="Ingresar">
-    </form>
+<body class="login-body">
+    <div class="login-container">
+        <h2 class="login-title">Bienvenido</h2>
+        <form class="login-form" action="LoginServlet" method="post">
+            <input class="login-input" type="text" name="usuario" placeholder="Usuario" required>
+            <input class="login-input" type="password" name="clave" placeholder="Contraseña" required>
+            <button class="login-button" type="submit">Iniciar sesión</button>
+        </form>
+    </div>
 </body>
 </html>
